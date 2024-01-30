@@ -22,6 +22,7 @@ $myUpdateChecker = PucFactory::buildUpdateChecker(
 $myUpdateChecker->setBranch('main');
 $myUpdateChecker->getVcsApi()->enableReleaseAssets();
 
+echo get_plugin_updates();
 
 function cf7_form_testing_init() {
     if (!is_plugin_active('contact-form-7/wp-contact-form-7.php')) {
