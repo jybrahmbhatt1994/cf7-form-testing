@@ -57,18 +57,3 @@ function cf7_addon_sanitize_emails($input) {
 
 add_action('admin_menu', 'cf7_addon_plugin_menu');
 add_action('admin_init', 'cf7_addon_plugin_register_settings');
-
-
-// Hook into the admin_notices action to display notices
-add_action('admin_notices', 'my_custom_admin_notices');
-// Function to display admin notices
-function my_custom_admin_notices()
-{
-    if (isset($_GET['settings-updated']) && $_GET['settings-updated']) {
-        // Display a success notice
-        echo '<div class="notice notice-success is-dismissible"><p>Testing IDs are set successfully!</p></div>';
-    } elseif (isset($_GET['settings-error']) && $_GET['settings-error']) {
-        // Display an error notice
-        echo '<div class="notice notice-error is-dismissible"><p>Error saving settings!</p></div>';
-    }
-}
