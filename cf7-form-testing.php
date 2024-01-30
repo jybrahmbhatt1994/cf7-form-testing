@@ -2,7 +2,7 @@
 /**
  * Plugin Name: CF7 Form Testing
  * Description: An add-on plugin for Contact Form 7 to set test email IDs.
- * Version: 1.1
+ * Version: 1.1.1
  * Author: Jainish Brahmbhatt
  */
 
