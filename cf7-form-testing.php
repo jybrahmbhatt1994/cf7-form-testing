@@ -32,6 +32,13 @@ function cf7_form_testing_init() {
     require_once plugin_dir_path(__FILE__) . 'admin-settings.php';
 }
 
+// Activation Hook
+function cf7_form_testing_activate() {
+    wp_redirect(admin_url('admin.php?page=cf7-form-testing'));
+    // No exit here, as it's an activation hook
+}
+register_activation_hook(__FILE__, 'cf7_form_testing_activate');
+
 function cf7_form_testing_admin_notice() {
     echo '<div class="notice notice-warning"><p>Contact Form 7 is not active. CF7 Form Testing plugin requires Contact Form 7 to be installed and activated.</p></div>';
 }
