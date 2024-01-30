@@ -10,6 +10,16 @@ if (!defined('ABSPATH')) {
     exit; // Exit if accessed directly
 }
 
+// Plugin update checker
+require 'plugin-update-checker/plugin-update-checker.php';
+$myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
+    'https://github.com/jybrahmbhatt1994/CF7-Form-Testing', // Your GitHub repo URL
+    __FILE__, // Full path to the main plugin file
+    'CF7-Form-Testing' // The slug of your plugin
+);
+$myUpdateChecker->setUpdateCheckInterval(43200); // Check every 12 hours
+
+
 function cf7_form_testing_init() {
     if (!is_plugin_active('contact-form-7/wp-contact-form-7.php')) {
         add_action('admin_notices', 'cf7_form_testing_admin_notice');
