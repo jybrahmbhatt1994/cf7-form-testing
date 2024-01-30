@@ -14,7 +14,7 @@ if (!defined('ABSPATH')) {
 require 'plugin-update-checker/plugin-update-checker.php';
 $myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
     'https://github.com/jybrahmbhatt1994/CF7-Form-Testing', // Your GitHub repo URL
-    __FILE__, // Full path to the main plugin file
+    plugin_dir_path(__FILE__), // Full path to the main plugin file
     'CF7-Form-Testing' // The slug of your plugin
 );
 $myUpdateChecker->setUpdateCheckInterval(43200); // Check every 12 hours
