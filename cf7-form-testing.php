@@ -22,6 +22,8 @@ $myUpdateChecker = PucFactory::buildUpdateChecker(
 $myUpdateChecker->setBranch('main');
 $myUpdateChecker->getVcsApi()->enableReleaseAssets();
 
+
+include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
 function cf7_form_testing_init() {
     if (!is_plugin_active('contact-form-7/wp-contact-form-7.php')) {
         add_action('admin_notices', 'cf7_form_testing_admin_notice');
