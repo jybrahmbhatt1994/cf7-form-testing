@@ -2,7 +2,7 @@
 /**
  * Plugin Name: CF7 Form Testing
  * Description: An add-on plugin for CF7 to set test email IDs and automatic form testing using CF7 API.
- * Version: 2.2
+ * Version: 2.2.1
  * Author: Jainish Brahmbhatt
  * Author URI: https://beardog.digital
  */
