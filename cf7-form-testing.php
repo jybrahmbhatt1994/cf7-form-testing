@@ -2,13 +2,25 @@
 /**
  * Plugin Name: CF7 Form Testing
  * Description: An add-on plugin for Contact Form 7 to set test email IDs.
- * Version: 1.0
+ * Version: 2.3
  * Author: Jainish Brahmbhatt
  */
 
 if (!defined('ABSPATH')) {
     exit; // Exit if accessed directly
 }
+
+// Plugin update checker
+require 'plugin-update-checker/plugin-update-checker.php';
+use YahnisElsts\PluginUpdateChecker\v5\PucFactory;
+$myUpdateChecker = PucFactory::buildUpdateChecker(
+    'https://github.com/jybrahmbhatt1994/cf7-form-testing/', // Your GitHub repo URL
+    __FILE__, // Full path to the main plugin file
+    'cf7-form-testing' // The slug of your plugin
+);
+
+$myUpdateChecker->setBranch('main');
+$myUpdateChecker->getVcsApi()->enableReleaseAssets();
 
 function cf7_form_testing_init() {
     if (!is_plugin_active('contact-form-7/wp-contact-form-7.php')) {
