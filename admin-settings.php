@@ -25,7 +25,7 @@ function cf7_addon_plugin_settings_page() {
             </div>
             <div style="margin-bottom: 20px;">
                 <label for="custom_email">Mail Ids:</label><br>
-                <input type="text" name="cf7_form_testing_emails" value="<?php echo esc_attr(get_option('cf7_form_testing_emails')); ?>" style="width:100%;" required/>
+                <input type="email" multiple name="cf7_form_testing_emails" value="<?php echo esc_attr(get_option('cf7_form_testing_emails')); ?>" style="width:100%;" required/>
             </div>
             <div>    
                 <input type="submit" name="submit" id="submit" class="button button-primary" value="Save Changes" style="width: 100%;">
